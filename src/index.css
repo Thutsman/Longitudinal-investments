@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1F2937;
+    background-color: #FFFFFF;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  /* Gold-filled primary action button */
+  .btn-primary {
+    @apply bg-brand-gold text-brand-dark px-7 py-3 rounded-lg
+           font-semibold font-display text-sm tracking-wide
+           transition-all duration-200
+           hover:bg-brand-gold-hover hover:shadow-md hover:-translate-y-px
+           inline-flex items-center gap-2
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Gold-outlined secondary button (for use on dark backgrounds) */
+  .btn-outline-gold {
+    @apply border-2 border-brand-gold text-brand-gold px-7 py-3 rounded-lg
+           font-semibold font-display text-sm tracking-wide
+           transition-all duration-200
+           hover:bg-brand-gold hover:text-brand-dark
+           inline-flex items-center gap-2;
+  }
+
+  /* Slate-filled button (for use on light backgrounds) */
+  .btn-slate {
+    @apply bg-brand-slate text-white px-7 py-3 rounded-lg
+           font-semibold font-display text-sm tracking-wide
+           transition-all duration-200
+           hover:bg-[#111827] hover:shadow-md hover:-translate-y-px
+           inline-flex items-center gap-2;
+  }
+
+  /* Section label badge (pill above headings) */
+  .section-label {
+    @apply inline-flex items-center gap-2 text-brand-gold
+           bg-brand-gold/10 border border-brand-gold/20
+           px-4 py-1.5 rounded-full text-xs font-semibold
+           font-display tracking-widest uppercase mb-5;
+  }
+
+  /* Section heading typography */
+  .section-heading {
+    @apply font-display font-bold text-brand-slate
+           tracking-tight leading-tight;
+  }
+
+  /* Card with subtle lift on hover */
+  .card-hover {
+    @apply transition-all duration-300
+           hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  /* Gold divider accent line */
+  .gold-rule {
+    @apply w-10 h-0.5 bg-brand-gold rounded-full;
+  }
+
+  /* Input field with gold focus ring */
+  .form-input {
+    @apply w-full px-4 py-2.5 border border-brand-border rounded-xl
+           text-sm text-brand-slate bg-white
+           focus:outline-none focus:ring-2 focus:ring-brand-gold/40
+           focus:border-brand-gold transition-all duration-200
+           placeholder:text-gray-400;
+  }
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: #F3F4F6; }
+::-webkit-scrollbar-thumb { background: #1F2937; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #C8A951; }
