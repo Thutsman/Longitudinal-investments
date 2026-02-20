@@ -132,7 +132,7 @@ export default function Contact() {
               <div className="font-display font-bold mb-3">Company Details</div>
               <div className="space-y-1.5 text-brand-on-dark/60 text-sm">
                 <div><span className="text-white font-medium">Reg. No:</span> 956/2003</div>
-                <div><span className="text-white font-medium">BP Number:</span> 200047752</div>
+                <div><span className="text-white font-medium">TIN:</span> 2000260915</div>
                 <div><span className="text-white font-medium">VAT No:</span> 10046665</div>
                 <div><span className="text-white font-medium">Bank:</span> Stanbic Bank (Belmont)</div>
               </div>
