@@ -1,0 +1,6 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location (helps Google discover your pages)
+Sitemap: https://longitudinal-investments.vercel.app/sitemap.xml
